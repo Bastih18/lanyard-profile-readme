@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import renderCard from "../../src/renderCard";
 import { isSnowflake } from "../../src/snowflake";
-import redis from "../../src/redis";
 
 type Data = {
     id?: string | string[];
@@ -36,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         });
 
     try {
-        getUser.data = await fetch(`https://api.lanyard.rest/v1/users/${userId}`).then(res => res.json());
+        getUser.data = await fetch(`https://lanapi.pixelvault.co/v1/users/${userId}`).then(res => res.json());
     } catch (error: any) {
         if (error.response.data && error.response.data.error.message)
             return res
@@ -51,14 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
             error: `Something went wrong! If everything looks correct and this still occurs, please contact @notcnrad on Twitter.`,
         });
     }
-
-    try {
-        let user = await redis.hget("users", userId);
-        if (!user) await redis.hset("users", userId, "true");
-    } catch {
-        null;
-    }
-
+    
     res.setHeader("Content-Type", "image/svg+xml; charset=utf-8");
     res.setHeader("content-security-policy", "default-src 'none'; img-src * data:; style-src 'unsafe-inline'");
 
