@@ -9,8 +9,8 @@ export async function getServerSideProps(context: any) {
     // Get the monitored user count if needed from an API or set a default value
     let monitoredUserCount = 116;
     try {
-        const response = await axios.get("https://lanreadme.pixelvault.co/api/getUserCount", { timeout: 1000 });
-        monitoredUserCount = response.data.count;
+        const response = await axios.get("https://lanapi.pixelvault.co", { timeout: 1000 });
+        monitoredUserCount = response.data.monitored_user_count;
     } catch (error) {
         console.error("Failed to fetch user count:", error);
     }
