@@ -39,7 +39,7 @@ export async function GET(
     );
 
   const lanyardData = await fetch(
-    `https://api.lanyard.rest/v1/users/${userId}`,
+    `https://lanapi.pixelvault.co/v1/users/${userId}`,
     {
       cache: "no-store",
     }
