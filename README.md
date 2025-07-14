@@ -1,3 +1,7 @@
+> ❗ IMPORTANT ❗
+> 
+> If you are using `lanyard-profile-readme.vercel.app`, change it to `lanyard.cnrad.dev` at your earliest convenience!
+
 <!-- markdownlint-disable -->
 # lanyard-profile-readme
 
@@ -49,13 +53,11 @@ If you don't want the default "`I'm not currently doing anything!`" as your idle
 
 If you'd like to show your global display name as well as your username, append the query param `showDisplayName=true` to the end of the URL. This is set to `false` by default.
 
-### ___Avatar Decoration___
-
-#### ___Hide Avatar Decoration___
+### ___Hide Avatar Decoration___
 If you don't want people seeing your Avatar Decoration, append the query param `hideDecoration=true` to the end of the URL. Your Avatar Decoration is shown by default if you have one.
 
-#### ___Toggle Animated Avatar Decoration___
-If you have an Animated Avatar Decoration, append the query param `animatedDecoration=:bool` to the end of the URL, replacing `:bool` with `true` or `false`. This is set to `true` by default.
+### ___Enable Animated Avatar Decoration___
+If you have an Animated Avatar Decoration, append the query param `animatedDecoration=true` to the URL. This is set to `false` by default to minimize response size.
 
 ### ___Hide Status___
 
@@ -65,9 +67,9 @@ If you don't want people seeing your status, append the query param `hideStatus=
 
 If you don't want people seeing the elapsed time on an activity, append the query param `hideTimestamp=true` to the end of the URL. Elapsed time is shown by default.
 
-### ___Hide Clan Tag___
+### ___Hide Server Tag___
 
-If you don't want people seeing your Clan Tag (formerly known as Guilds), append the query param `hideClan=true` to the end of the URL. Clan Tag is shown by default.
+If you don't want people seeing your Server Tag (formerly known as Clan/Guild Tag), append the query param `hideTag=true` to the end of the URL. Server Tag is shown by default.
 
 ### ___Hide Badges___
 
@@ -89,17 +91,13 @@ If you don't want people seeing your Spotify activity, append the query param `h
 
 If you don't want to display a specific application, append the query param `ignoreAppId=:app_id` to the end of the URL, IDs separate by `,`.
 
-### ___Hide Discriminator___ (DEPRECATED soon)
-
-If you don't want people seeing your discriminator (most likely for privacy reasons), append the query param `hideDiscrim=true` to the end of the URL. Your discriminator is shown by default.
-
 ## ___Example URL and result___
 
 ```
-[![Discord Presence](https://lanyard-profile-readme.vercel.app/api/94490510688792576?theme=light&bg=809ecf&animated=false&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...)](https://discord.com/users/94490510688792576)
+[![Discord Presence](https://lanyard.cnrad.dev/api/94490510688792576?theme=light&bg=809ecf&animated=false&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...)](https://discord.com/users/94490510688792576)
 ```
 
-[![Discord Presence](https://lanyard-profile-readme.vercel.app/api/94490510688792576?theme=light&bg=809ecf&animated=false&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...)](https://discord.com/users/94490510688792576)
+[![Discord Presence](https://lanyard.cnrad.dev/api/94490510688792576?theme=light&bg=809ecf&animated=false&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...)](https://discord.com/users/94490510688792576)
 
 \
 Note: Current Nitro & Boosting badges **do not work due** to Discord API limitations, unless you currently have an animated avatar, in which case it will display the Nitro badge.
